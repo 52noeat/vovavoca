@@ -24,7 +24,6 @@ Ngram.SVC = function (input, dataset, k) {
 
 Ngram.split =  function (str) {
     let set = new Array()
-
     for (let i = 0; i < str.length - 1; i++) {
         set.push(str[i] + str[i + 1])
     }
@@ -44,6 +43,8 @@ Ngram.similarity = function (str1, str2) {
             }
         }
     }
+    // console.log(str1)
+    // console.log(str2)
     // console.log(set1)
     // console.log(set2)
 
@@ -52,9 +53,9 @@ Ngram.similarity = function (str1, str2) {
     return sim;
 }
 
-// Ngram.SVC("bear",
-//     ["bare"],
-//     1)
+// Ngram.SVC("bear", ["bare","teal"], 1)
+// Ngram.SVC("sit", ["set","teal"], 1)
+// Ngram.SVC("simple", ["dimple","sample", "apple","sem572","ampoule","dimple","simpl"], 3);
 // Ngram.SVC("pect", ["ahrab", "arrab","fact", "affact","fect" ,"effect","bear", "apple","asynarab","href","rabbit",], 3)
 
 module.exports = Ngram;

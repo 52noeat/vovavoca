@@ -10,6 +10,7 @@ levenshtein.SVC =function(input, dataset, k) {
         }
 
         sim_set.sort((a, b) => a.sim > b.sim ? 1 : a.sim < b.sim ? -1 : 0)
+        console.log(input)
         console.log(sim_set)
         for (let i = 0; i < k; i++) {
             output.push(sim_set[i].voca)
@@ -18,6 +19,6 @@ levenshtein.SVC =function(input, dataset, k) {
         return
     }
 
-// levenshtein.SVC("arab", ["ahrab", "arrab", "apple","asynarab","href","rabbit",], 3)
+levenshtein.SVC("need", ["nid", "ed", "nd","needed"], 3)
 
 module.exports = levenshtein;
